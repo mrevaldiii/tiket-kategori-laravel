@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="container">
-        <!-- 1. NAVBAR GELAP NAVY SEPERTI CONTOH -->
+        
         <div class="navbar-dark">
             <div>
                 <h2 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Sistem Pengelolaan Tiket & Kategori</h2>
