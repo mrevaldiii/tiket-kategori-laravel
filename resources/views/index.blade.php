@@ -17,16 +17,31 @@
             </div>
 
             <div class="grid-info">
-                <div class="info-item"><label>Nama</label><span>Muhammad Revaldi</span></div>
-                <div class="info-item"><label>NIM</label><span>102022500014</span></div>
-                <div class="info-item"><label>Kelas</label><span>SI-49-06</span></div>
-                <div class="info-item"><label>Kelompok</label><span>Kelompok 8</span></div>
-                <div class="info-item"><label>Modul</label><span>Tiket & Kategori</span></div>
+                <div class="info-item">
+                    <label>Nama</label>
+                    <span>Muhammad Revaldi</span>
+                </div>
+                <div class="info-item">
+                    <label>NIM</label>
+                    <span>102022500014</span>
+                </div>
+                <div class="info-item">
+                    <label>Kelas</label>
+                    <span>SI-49-06</span>
+                </div>
+                <div class="info-item">
+                    <label>Kelompok</label>
+                    <span>Kelompok 8</span>
+                </div>
+                <div class="info-item">
+                    <label>Modul</label>
+                    <span>Tiket & Kategori</span>
+                </div>
             </div>
         </div>
 
         <div>
-            <h3 style="margin-bottom: 0.75rem; color: var(--text-primary);">Ringkasan Modul</h3>
+            <h3 style="color: #ffffff; margin-bottom: 1rem;">Ringkasan Modul</h3>
             <div class="summary-cards-grid">
                 <div class="summary-card-item">
                     <label>Total Kategori Tiket</label>
@@ -41,11 +56,9 @@
             </div>
         </div>
 
-        <div class="card">
-            <form action="{{ route('tiket.kelola') }}" method="GET">
-                <button type="submit" class="btn btn-block">Lanjutkan Memilih Tiket &gt;</button>
-            </form>
-        </div>
+        <a href="{{ route('tiket.kelola') }}" class="btn btn-block">
+            Lanjutkan Memilih Tiket →
+        </a>
     </div>
 </body>
 </html>

@@ -1,12 +1,13 @@
 :root {
-    --bg-main: #0f172a;
-    --card-bg: #1e293b;
-    --border-color: #334155;
-    --accent: #6366f1;
-    --accent-hover: #4f46e5;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --success: #10b981;
+    --bg-main: #181e29;         /* Latar belakang halaman utama gelap */
+    --header-bg: #2a3444;       /* Warna navy gelap untuk header/navbar */
+    --card-bg: #ffffff;         /* Card konten utama berwarna putih */
+    --text-primary: #1e293b;    /* Teks gelap di atas card putih */
+    --text-secondary: #64748b;  /* Teks keterangan abu-abu */
+    --border-color: #e2e8f0;    /* Garis tepi card & tabel */
+    --accent: #3b82f6;          /* Tombol utama biru cerah */
+    --accent-hover: #2563eb;    /* Tombol biru saat diarahkan kursor */
+    --success: #10b981;         /* Warna hijau harga & centang */
 }
 
 * {
@@ -33,12 +34,26 @@ body {
     gap: 1.5rem;
 }
 
+/* Header / Navbar Identitas Gelap Navy */
+.navbar-dark {
+    background: var(--header-bg);
+    color: #f8fafc;
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #374151;
+}
+
+/* Card Utama Putih */
 .card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 1.75rem;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+    color: var(--text-primary);
 }
 
 .profile-header {
@@ -53,7 +68,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--accent);
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(59, 130, 246, 0.12);
     padding: 0.25rem 0.6rem;
     border-radius: 4px;
     display: inline-block;
@@ -70,10 +85,10 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 1rem;
-    background: rgba(15, 23, 42, 0.4);
+    background: #f8fafc;
     padding: 1rem;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
 }
 
 .info-item label {
@@ -88,6 +103,7 @@ body {
 .info-item span {
     font-size: 0.95rem;
     font-weight: 600;
+    color: var(--text-primary);
 }
 
 .summary-cards-grid {
@@ -99,7 +115,7 @@ body {
 .summary-card-item {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 1.5rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -128,9 +144,9 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--accent);
-    color: white;
-    padding: 0.75rem 1.25rem;
-    border-radius: 8px;
+    color: #ffffff;
+    padding: 0.65rem 1.25rem;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
     border: none;
@@ -147,33 +163,6 @@ body {
     margin-top: 1rem;
 }
 
-.category-select {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.category-card {
-    border: 2px solid var(--border-color);
-    border-radius: 10px;
-    padding: 1rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.category-card:hover {
-    border-color: var(--accent);
-}
-
-.category-card input[type="radio"] {
-    display: none;
-}
-
-.category-card input[type="radio"]:checked + .category-content {
-    color: var(--accent);
-}
-
 .form-group {
     display: flex;
     flex-direction: column;
@@ -184,13 +173,14 @@ body {
 .form-group label {
     font-size: 0.875rem;
     color: var(--text-secondary);
+    font-weight: 600;
 }
 
 .form-control {
-    background: var(--bg-main);
-    border: 1px solid var(--border-color);
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
     border-radius: 6px;
-    padding: 0.75rem;
+    padding: 0.7rem;
     color: var(--text-primary);
     font-size: 0.95rem;
 }
@@ -198,10 +188,11 @@ body {
 .form-control:focus {
     outline: none;
     border-color: var(--accent);
+    background: #ffffff;
 }
 
 select.form-control option {
-    background-color: var(--card-bg);
+    background-color: #ffffff;
     color: var(--text-primary);
 }
 
@@ -213,9 +204,9 @@ select.form-control option {
 }
 
 .ticket-card {
-    background: var(--bg-main);
+    background: #f8fafc;
     border: 1px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 1.25rem;
     display: flex;
     flex-direction: column;

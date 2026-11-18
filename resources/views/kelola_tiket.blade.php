@@ -8,20 +8,32 @@
 </head>
 <body>
     <div class="container">
-        <!-- 1. NAVBAR IDENTITAS USER & LOGOUT -->
-        <div style="display: flex; justify-content: space-between; align-items: center; background: var(--card-bg); padding: 1rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid var(--border-color);">
-            <div style="color: var(--text-primary);">
-                Logged in as: <strong>{{ auth()->user()->name }}</strong> (Role: <span style="text-transform: uppercase; color: #3b82f6; font-weight: bold;">{{ auth()->user()->role }}</span>)
+        <!-- 1. NAVBAR GELAP NAVY SEPERTI CONTOH -->
+        <div class="navbar-dark">
+            <div>
+                <h2 style="font-size: 1.25rem; margin-bottom: 0.25rem;">Sistem Pengelolaan Tiket & Kategori</h2>
+                <span style="font-size: 0.85rem; color: #cbd5e1;">Modul transaksi tiket - pengelolaan pemesanan & kuota</span>
             </div>
-            <form action="{{ route('logout') }}" method="POST" style="margin: 0;">
-                @csrf
-                <button type="submit" class="btn" style="background: #ef4444; padding: 0.4rem 0.8rem; font-size: 0.85rem;">Logout</button>
-            </form>
+            <div style="text-align: right; background: rgba(15, 23, 42, 0.4); padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #374151;">
+                <div style="font-size: 0.85rem; margin-bottom: 0.3rem;">
+                    Login sebagai: <strong>{{ auth()->user()->name }}</strong>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.5rem;">
+                    <span style="font-size: 0.75rem; color: #cbd5e1;">Role:</span>
+                    <span style="background: #ffffff; color: #1e293b; font-size: 0.7rem; font-weight: 800; padding: 0.15rem 0.45rem; border-radius: 4px; text-transform: uppercase;">
+                        {{ auth()->user()->role }}
+                    </span>
+                    <form action="{{ route('logout') }}" method="POST" style="margin: 0;">
+                        @csrf
+                        <button type="submit" style="background: transparent; border: 1px solid #64748b; color: #f8fafc; padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.75rem; cursor: pointer;">Logout</button>
+                    </form>
+                </div>
+            </div>
         </div>
 
         <div style="margin-bottom: -0.5rem;">
             <a href="{{ route('home') }}" class="btn" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-primary); padding: 0.5rem 1rem;">
-                &larr; Kembali
+                ← Kembali
             </a>
         </div>
 
